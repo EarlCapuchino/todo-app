@@ -8,7 +8,7 @@ const AddTodo = ({ fetchTodos }) => {
     event.preventDefault();
     if (!todoText) return;
     try {
-      await axios.post('http://localhost:5000/api/todos', { text: todoText });
+      await axios.post('/api/todos', { text: todoText });
       setTodoText('');
       fetchTodos();
     } catch (error) {
